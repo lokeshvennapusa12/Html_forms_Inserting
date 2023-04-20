@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_student</title>
+</head>
+<body>
+    <center>
+        <h1>display Student Details</h1>
+        <table border="3px">
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>    
+                <th>Student Age</th>
+                <th>Student Add</th>
+                <th>Student Resume</th>
+                <th>Student Image</th>
+            </tr>
+            {% for i in SQS %}
+
+                <tr>
+                    <td align="center">{{ i.sid }}</td>
+                    <td align="center">{{ i.name }}</td>
+                    <td align="center">{{ i.age }}</td>
+                    <td align="center">{{ i.address }}</td>
+                    <td align="center">{{ i.resume }}</td>
+                    <td align="center">{{ i.image }}</td>
+
+                </tr>
+
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
